@@ -1,0 +1,1452 @@
+/* ==========================================================================
+   Portfolio Design System — Extracted from Webflow
+   Fonts: Poppins (headings + body), Montserrat, Work Sans
+   ========================================================================== */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: hsla(0, 0%, 18.82%, 1);
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: disc;
+}
+
+/* --- Navigation --- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.nav-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #303030;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #303030;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+}
+
+/* --- Layout --- */
+.section {
+  display: block;
+  width: 100%;
+  margin-top: 7rem;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  transition: opacity 300ms ease;
+}
+
+.section-hero {
+  display: flex;
+  width: 100%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Project-specific hero backgrounds */
+.section-hero.oasis {
+  background-color: hsla(220, 100%, 96%, 1);
+}
+
+.section-hero.salesforce {
+  background-color: hsla(210, 100%, 96.08%, 1);
+}
+
+.container {
+  display: flex;
+  overflow: visible;
+  width: 100%;
+  max-width: 940px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* --- Columns (Hero Layout) --- */
+.columns {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+}
+
+.column {
+  display: block;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+}
+
+.column-title {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+  padding-left: 6rem;
+}
+
+.column.title {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+/* --- Typography --- */
+.heading-title {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.625rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.heading-1-n {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #303030;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.heading-2-n {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  color: #303030;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.heading-3-n {
+  display: block;
+  overflow: visible;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  color: #303030;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.heading-4-n {
+  display: block;
+  overflow: visible;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: hsla(0, 0%, 18.82%, 0.40);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.heading-5-n {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: hsla(0, 0%, 18.82%, 0.40);
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Heading 6 N — tag/pill style */
+.heading-6-n {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.875rem;
+  border: 2px solid;
+  border-radius: 2rem;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+
+.heading-subtitle {
+  min-width: 7.5rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.paragraph {
+  display: block;
+  overflow: visible;
+  width: 100%;
+  margin-bottom: 0.625rem;
+  font-family: 'Poppins', sans-serif;
+  color: hsla(0, 0%, 18.82%, 1);
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* --- Project Color Themes --- */
+
+/* OASIS (NYC DOE Dark Blue for text hierarchy) */
+.heading-title.oasis { color: #013466; }
+.heading-4-n.oasis { color: #013466; }
+.heading-6-n.oasis { border-color: #013466; color: #013466; }
+
+/* Salesforce */
+.heading-title.salesforce { color: #0271bb; }
+.heading-6-n.salesforce { border-color: #0271bb; color: #0271bb; }
+
+/* Beamable */
+.heading-6-n.beamable { border-color: #6351ab; color: #6351ab; }
+
+/* --- Hero Sub-elements --- */
+.div-subtitle {
+  margin-bottom: 1rem;
+}
+
+.div-info {
+  display: flex;
+}
+
+.div-thumbnail {
+  position: static;
+  height: 35rem;
+  background-image: url("../images/63fd0b2f9748f53c4704dabe_thumbnail_salesforce_N.png");
+  background-position: 0% 0%;
+  background-size: cover;
+}
+
+/* --- Spacers --- */
+.spacer-3 {
+  width: 100%;
+  height: 3rem;
+}
+
+.spacer-6 {
+  width: 100%;
+  height: 6rem;
+}
+
+/* --- Lists --- */
+.list {
+  margin-top: 0.625rem;
+  margin-bottom: -0.625rem;
+  padding-left: 2rem;
+}
+
+.list-item {
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* --- Images --- */
+.image {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+}
+
+/* --- Image Placeholder --- */
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 20rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border: 2px dashed #d0d0d0;
+  border-radius: 0.75rem;
+  color: hsla(0, 0%, 18.82%, 0.4);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* --- Highlight Block --- */
+.div-highlight {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 0.75rem;
+  background-color: hsla(210, 100%, 96.08%, 1);
+  text-align: center;
+}
+
+/* --- Footer --- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.footer-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  color: hsla(0, 0%, 18.82%, 0.4);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+  color: hsla(0, 0%, 18.82%, 0.6);
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+/* --- Back to Top --- */
+.button-top {
+  position: sticky;
+  top: 88%;
+  right: 3%;
+  z-index: 1;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  float: right;
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+
+/* --- Progress Bar --- */
+.progress {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-bar {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 2px;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.progress-bar-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  display: block;
+  width: 0%;
+  height: 8px;
+  border-radius: 2px;
+  background-image: linear-gradient(to bottom, #3170e7, #3170e7);
+  transition: width 0.1s ease;
+}
+
+/* --- NDA Note --- */
+.nda-note {
+  font-style: italic;
+  color: hsla(0, 0%, 18.82%, 0.5);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (matching Webflow)
+   - medium (tablet): max 991px
+   - small (mobile landscape): max 767px
+   - tiny (mobile portrait): max 478px
+   ========================================================================== */
+
+@media screen and (max-width: 991px) {
+  .section {
+    margin-top: 5rem;
+  }
+
+  .column-title {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .columns {
+    display: block;
+    align-items: flex-start;
+  }
+
+  .heading-title {
+    margin-top: 1rem;
+  }
+
+  .progress-bar,
+  .progress-bar-indicator {
+    height: 6px;
+  }
+
+  .section-hero {
+    width: 100%;
+  }
+
+  .div-thumbnail {
+    height: 28rem;
+  }
+
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
+
+  .column {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .column-title {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
+
+  .heading-1-n {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+
+  .spacer-3 {
+    height: 3rem;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .section-hero {
+    width: 100%;
+  }
+
+  .image-placeholder {
+    min-height: 14rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .heading-title {
+    font-size: 2rem;
+    line-height: 2.875rem;
+    font-weight: 600;
+  }
+
+  .heading-4-n {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .heading-5-n {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+
+  .heading-6-n {
+    text-align: center;
+  }
+
+  .heading-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .heading-2-n {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .paragraph,
+  .list-item {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  .column {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .column-title {
+    text-align: left;
+  }
+
+  .div-thumbnail {
+    height: 20rem;
+    background-size: cover;
+  }
+
+  .progress-bar,
+  .progress-bar-indicator {
+    height: 4px;
+  }
+
+  .div-info {
+    flex-wrap: wrap;
+  }
+
+  .image-placeholder {
+    min-height: 12rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   OASIS Case Study — DOE Color System
+   Dark Blue: #013466  |  Medium Blue: #6D9AD0  |  Green: #83B345
+   Orange: #F0982B     |  Gray: #CBCBCB
+
+   ADA Notes:
+   - White text on Dark Blue (#013466): ~14:1 contrast — passes AAA
+   - Dark Blue text on Green (#83B345): 4.8:1 — passes AA normal
+   - Dark Blue text on Orange (#F0982B): 5.2:1 — passes AA normal
+   - Metric numbers #C46D10 on white: 3.8:1 — passes AA large text (3rem bold)
+   - CTA button #013466 on #F0982B: 5.2:1 — passes AA normal
+   ========================================================================== */
+
+/* --- Section Dividers --- */
+.divider-new.oasis-dark {
+  background-color: #013466;
+}
+
+.divider-new.oasis-green {
+  background-color: #83B345;
+}
+
+.divider-new.oasis-orange {
+  background-color: #F0982B;
+}
+
+/* Divider vertical centering */
+.divider-new.oasis-dark .content,
+.divider-new.oasis-green .content,
+.divider-new.oasis-orange .content {
+  margin-bottom: 0;
+}
+
+.divider-new.oasis-dark .heading-1-n,
+.divider-new.oasis-dark .heading-2-n,
+.divider-new.oasis-dark .heading-4-n,
+.divider-new.oasis-green .heading-1-n,
+.divider-new.oasis-green .heading-2-n,
+.divider-new.oasis-green .heading-4-n,
+.divider-new.oasis-orange .heading-1-n,
+.divider-new.oasis-orange .heading-2-n,
+.divider-new.oasis-orange .heading-4-n {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* ADA: dark text on green/orange dividers */
+.divider-new.oasis-green .heading-1-n,
+.divider-new.oasis-green .heading-2-n,
+.divider-new.oasis-green .heading-4-n,
+.divider-new.oasis-orange .heading-1-n,
+.divider-new.oasis-orange .heading-2-n,
+.divider-new.oasis-orange .heading-4-n {
+  color: #013466;
+}
+
+/* --- OASIS Hero --- */
+.section-oasis-hero {
+  display: flex;
+  width: 100%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: #013466;
+  color: #fff;
+}
+
+.section-oasis-hero .heading-title {
+  color: #fff;
+}
+
+.section-oasis-hero .heading-6-n {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.section-oasis-hero .heading-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section-oasis-hero .paragraph {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-oasis-hero .image-placeholder {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Card Color Modifiers --- */
+.card-green {
+  border-top: 4px solid #83B345;
+  background-color: #F8FBF4;
+}
+
+.card-orange {
+  border-top: 4px solid #F0982B;
+  background-color: #FDF8F1;
+}
+
+.card-blue {
+  border-top: 4px solid #6D9AD0;
+  background-color: #F3F7FC;
+}
+
+/* --- Challenge Cards --- */
+.challenge-card {
+  border-left: 4px solid #6D9AD0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.75rem;
+  text-align: left;
+  background-color: #F3F7FC;
+}
+
+.challenge-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: hsla(0, 0%, 18.82%, 0.8);
+  margin: 0;
+}
+
+.challenge-card strong {
+  font-weight: 400;
+  color: #013466;
+}
+
+/* --- Role Scope Label (Context section) --- */
+.role-scope {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1a5087;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Solution Role List --- */
+.solution-role-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.solution-role-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: hsla(0, 0%, 18.82%, 0.8);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.solution-role-list li:last-child {
+  border-bottom: none;
+}
+
+/* --- Metric Cards --- */
+.metric-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.metric-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #C46D10;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 0.5rem;
+}
+
+.metric-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: hsla(0, 0%, 18.82%, 0.7);
+  margin: 0;
+}
+
+/* --- Takeaway Cards --- */
+.takeaway-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.75rem;
+  text-align: left;
+}
+
+.takeaway-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #013466;
+  margin-bottom: 0.75rem;
+}
+
+.takeaway-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: hsla(0, 0%, 18.82%, 0.8);
+  margin: 0;
+}
+
+.takeaway-card strong {
+  font-weight: 400;
+  color: #013466;
+}
+
+/* --- Card Grids --- */
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.card-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* --- CTA Banner --- */
+.cta-banner {
+  background-color: #013466;
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.cta-banner h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #F0982B;
+  color: #013466;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.875rem 2.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #D9871F;
+  transform: translateY(-1px);
+}
+
+/* --- Content Sub-headings (Challenge/Solution labels within sections) --- */
+.content-subhead {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1a5087;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.content-subhead:first-of-type {
+  margin-top: 0;
+}
+
+/* --- Solution Sections --- */
+.solution-section + .solution-section {
+  margin-top: 3rem;
+}
+
+/* --- Progress Bar OASIS override --- */
+.progress-bar-indicator.oasis {
+  background-image: linear-gradient(to bottom, #013466, #013466);
+}
+
+/* --- Progress Bar Salesforce override --- */
+.progress-bar-indicator.salesforce {
+  background-image: linear-gradient(to bottom, #0271bb, #0271bb);
+}
+
+/* --- OASIS Responsive Overrides --- */
+@media screen and (max-width: 991px) {
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-oasis-hero {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .metric-number {
+    font-size: 2.5rem;
+  }
+
+  .solution-section + .solution-section {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-screenshot {
+    width: 100%;
+  }
+
+  .card-grid-3,
+  .card-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-banner p {
+    font-size: 1rem;
+  }
+
+  .metric-number {
+    font-size: 2.25rem;
+  }
+
+  .cta-banner {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .section-oasis-hero {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .challenge-card,
+  .takeaway-card,
+  .metric-card {
+    padding: 1.25rem;
+  }
+
+  .cta-banner {
+    padding: 3rem 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+/* ==========================================================================
+   Site-level fixes & additions
+   ========================================================================== */
+
+/* --- Hide Webflow badge (injected by webflow JS) --- */
+.w-webflow-badge {
+  display: none !important;
+}
+
+/* --- 1440px max-width for nav and footer content --- */
+.navigation-items {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-items {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- YouTube thumbnail fallback (Error 153 fix) --- */
+.yt-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 44px;
+  background: rgba(255, 0, 0, 0.9);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.youtube-thumb-link:hover .yt-play-btn {
+  background: #ff0000;
+}
+
+/* --- YouTube embed fix: ensure container height is computed correctly --- */
+.philosophy-video {
+  display: block;
+  width: 100%;
+}
+
+/* --- Homepage project card: OASIS --- */
+.div-work-image-2.oasis {
+  background-image: url("../images/cover_doe.png");
+  background-position: 50%;
+  background-size: cover;
+}
+
+.heading-5-n.oasis {
+  color: #013466;
+}
+
+/* --- Homepage intro paragraph: more breathing room + colorful pops --- */
+.section > .container-large .paragraph {
+  line-height: 2.4;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+
+.section > .container-large .text-span {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* Override Webflow: NYC DOE brand color on homepage intro */
+.text-span.nycdoe {
+  color: #013466;
+}
+
+/* --- Fun page card: DentaPal (replaces animal) --- */
+.div-fun-image.dentapal {
+  background-image: url("../images/cover_dentapal.png");
+  background-position: 50%;
+  background-size: cover;
+}
+
+.div-fun-image-blur.dentapal {
+  background-image: url("../images/cover_dentapal.png");
+  background-position: 50%;
+  background-size: cover;
+}
+
+/* --- Homepage main content max-width --- */
+.container-large {
+  max-width: 1280px;
+}
+
+/* --- Project card spacing: increase horizontal + vertical gaps ---
+   Design note: all card spacing is set here centrally for consistency.
+   Increase .w-col padding for horizontal gutter; compensate w-row margin. --- */
+.columns-large .w-col {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.columns-large .w-row {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
+
+.columns-large .div-work-new {
+  margin-top: 2.5rem;
+}
+
+/* --- Project card hover effect: single CSS-based animation applied to all cards.
+   Replaces Webflow JS interactions (data-w-id) for design consistency. --- */
+.div-work-new {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.div-work-new:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Project card title tag theme colors --- */
+.heading-5-n.salesforce { color: #0271bb; }
+.heading-5-n.beamable   { color: #6351ab; }
+.heading-5-n.best-buy   { color: #0046be; }
+
+/* --- Wuhan University brand color --- */
+.text-span.whu { color: #115740; }
+
+/* --- About: design philosophy evolution (strikethrough old heading + growth note) --- */
+.philosophy-old-heading {
+  text-decoration: line-through;
+  opacity: 0.3;
+  margin-bottom: 0.25rem;
+}
+
+.philosophy-evolution {
+  margin-top: 1.25rem;
+  opacity: 0.75;
+}
+
+/* --- OASIS case study: hero screenshot --- */
+.hero-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.hero-screenshot {
+  width: 115%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+/* --- OASIS case study: context diagram --- */
+.context-diagram-wrap {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.context-diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- OASIS case study: problem collage (blurred legacy screenshots) --- */
+.problem-collage {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.problem-collage-item {
+  flex: 1;
+  position: relative;
+}
+
+.problem-screenshot {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  filter: blur(3px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.problem-collage-label {
+  margin-top: 0.5rem;
+  font-size: 11px;
+  color: #888;
+  text-align: center;
+  font-style: italic;
+}
+
+.image-caption {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgb(94, 96, 110);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* --- Solution 01: breakout images (wider than container for detail on large screens) --- */
+.image-breakout {
+  width: calc(100% + 18rem) !important;
+  max-width: none !important;
+  margin-left: -9rem !important;
+  margin-right: -9rem !important;
+  margin-top: 1.5rem;
+}
+
+/* --- Solution 02 role views: two-column layout (image left, text right) --- */
+.role-views {
+  margin: 1.5rem 0;
+}
+
+.role-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.role-image {
+  flex: 0 0 60%;
+}
+
+.role-text {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.role-text .paragraph {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.role-text .content-subhead {
+  font-size: 0.75rem;
+}
+
+/* --- Solution 02 role view images: CSS shadow --- */
+.image-shadow {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0;
+  width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* --- Paragraph-to-image spacing (for flat Figma exports without built-in padding) --- */
+.paragraph + .image,
+.paragraph + .lightbox-trigger,
+.paragraph + .image-breakout {
+  margin-top: 1.5rem;
+}
+
+/* --- Caption-to-breakout image spacing --- */
+.image-caption + .image-breakout {
+  margin-top: 5rem !important;
+}
+
+@media screen and (max-width: 991px) {
+  .image-breakout {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .role-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .role-text {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* role-row already stacks vertically from 991px breakpoint */
+}
+
+/* --- OASIS case study: recommendation / quote cards --- */
+.quote-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.quote-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+  flex: 1;
+}
+
+.quote-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.quote-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.quote-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.quote-role {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.quote-highlight {
+  font-weight: 600;
+  color: #013466;
+}
+
+/* --- Nav & footer inner content max-width: matches container-large --- */
+.navigation-items {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-items {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Lightbox --- */
+img.lightbox-trigger {
+  cursor: zoom-in;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  cursor: zoom-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img,
+.lightbox-overlay .lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+  animation: lightbox-fade-in 0.2s ease;
+}
+
+.lightbox-overlay .lightbox-content {
+  width: 85vw;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.lightbox-overlay .lightbox-content svg {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes lightbox-fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Footer spacing: consistent across all pages --- */
+.footer-wrap {
+  margin-top: 5rem;
+}
