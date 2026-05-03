@@ -1,7 +1,6 @@
 # huchongjin.com — Portfolio Site (V1)
 
-<img width="1662" height="946" alt="home-hero" src="https://github.com/user-attachments/assets/e51ec15b-31f4-4183-b353-6d360e7d2474" />
-<br>
+![Homepage hero — huchongjin.com rendered in a macOS window mockup](screenshots/home-hero.png)
 
 Source for [huchongjin.com](https://huchongjin.com), a UX designer's portfolio.
 
